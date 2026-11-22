@@ -9,8 +9,6 @@ import "./globals.css";
 
 const themeInitScript = `(function(){try{var t=localStorage.getItem('theme');if(t==='light')document.documentElement.classList.add('light');}catch(e){}})();`;
 
-const localeInitScript = `(function(){try{var l=localStorage.getItem('locale');if(l==='es'||l==='en')document.documentElement.lang=l;else if(navigator.language.toLowerCase().indexOf('es')===0)document.documentElement.lang='es';}catch(e){}})();`;
-
 const manrope = Manrope({
   variable: "--font-sans",
   subsets: ["latin"],
@@ -30,40 +28,39 @@ const jetbrains = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://matiasperrone.dev"),
+  metadataBase: new URL("https://jacobvenneoliver.dev"),
   title: {
-    default: "Matias Perrone | Senior Full Stack Developer",
-    template: "%s | Matias Perrone",
+    default: "Jacob Venne Oliver | Senior DevOps Engineer",
+    template: "%s | Jacob Venne Oliver",
   },
   description:
-    "Senior Full Stack Developer with 20+ years building scalable web applications with React, Next.js, Vue, Node.js, Python, and PHP. Cloud-native on AWS.",
+    "Senior DevOps Engineer with 10+ years of software engineering and AWS cloud infrastructure experience, including CI/CD, Docker, Jenkins, GitLab, and Linux.",
   keywords: [
-    "Full Stack Developer",
-    "Senior Developer",
-    "React",
-    "Next.js",
-    "Node.js",
-    "Python",
-    "Laravel",
+    "DevOps Engineer",
     "AWS",
-    "Matias Perrone",
-    "Buenos Aires",
+    "CI/CD",
+    "Docker",
+    "Jenkins",
+    "GitLab",
+    "Linux",
+    "Cloud Infrastructure",
+    "Jacob Venne Oliver",
+    "Tampa",
   ],
-  authors: [{ name: "Matias Perrone" }],
-  creator: "Matias Perrone",
+  authors: [{ name: "Jacob Venne Oliver" }],
+  creator: "Jacob Venne Oliver",
   openGraph: {
-    title: "Matias Perrone | Senior Full Stack Developer",
+    title: "Jacob Venne Oliver | Senior DevOps Engineer",
     description:
-      "20+ years building scalable platforms, APIs, and cloud-native systems. Modernizing legacy, delivering impact.",
+      "AWS infrastructure, CI/CD automation, Docker, Linux operations, and production reliability.",
     type: "website",
     locale: "en_US",
-    alternateLocale: ["es_AR"],
-    siteName: "Matias Perrone",
+    siteName: "Jacob Venne Oliver",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Matias Perrone | Senior Full Stack Developer",
-    description: "Scalable systems. Clean architecture. High-impact delivery.",
+    title: "Jacob Venne Oliver | Senior DevOps Engineer",
+    description: "Reliable infrastructure. Faster releases. Secure delivery.",
   },
   robots: {
     index: true,
@@ -84,7 +81,6 @@ export default function RootLayout({
     >
       <body className="min-h-full antialiased">
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
-        <script dangerouslySetInnerHTML={{ __html: localeInitScript }} />
         <JsonLd />
         <ThemeProvider>
           <LanguageProvider>

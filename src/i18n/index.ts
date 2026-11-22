@@ -1,18 +1,16 @@
 import { en } from "./en";
-import { es } from "./es";
 import type { Locale, Messages } from "./types";
 
 export type { Locale, Messages };
 
 export const dictionaries: Record<Locale, Messages> = {
   en,
-  es,
 };
 
 export const LOCALE_STORAGE_KEY = "locale";
 
 export function isLocale(value: string | null): value is Locale {
-  return value === "en" || value === "es";
+  return value === "en";
 }
 
 export function interpolate(

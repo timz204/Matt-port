@@ -1,6 +1,6 @@
-# Clifford Klent Sayson — Portfolio
+# Jacob Venne Oliver — Portfolio
 
-Premium personal portfolio for a Senior Full Stack WordPress Developer / AI-Powered Web Platform Engineer.
+Premium personal portfolio for a Senior DevOps Engineer and software engineering leader.
 
 ## Stack
 

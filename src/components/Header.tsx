@@ -13,7 +13,7 @@ export function Header() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const { theme, toggleTheme } = useTheme();
-  const { locale, setLocale, m } = useI18n();
+  const { m } = useI18n();
   const reduceMotion = useReducedMotion();
 
   useEffect(() => {
@@ -52,7 +52,7 @@ export function Header() {
           onClick={() => setOpen(false)}
         >
           <span className="flex h-8 w-8 items-center justify-center rounded-md bg-accent/15 font-display text-sm text-accent">
-            M
+            J
           </span>
           <span className="truncate">{site.shortName}</span>
         </a>
@@ -70,32 +70,6 @@ export function Header() {
         </nav>
 
         <div className="hidden items-center gap-2 md:flex">
-          <div
-            className="inline-flex items-center rounded-md border border-line bg-canvas p-0.5"
-            role="group"
-            aria-label={m.common.language}
-          >
-            <button
-              type="button"
-              onClick={() => setLocale("en")}
-              className={`rounded px-2 py-1.5 text-[0.7rem] font-bold tracking-wide transition-colors ${
-                locale === "en" ? "bg-accent text-white" : "text-muted hover:text-ink"
-              }`}
-              aria-pressed={locale === "en"}
-            >
-              EN
-            </button>
-            <button
-              type="button"
-              onClick={() => setLocale("es")}
-              className={`rounded px-2 py-1.5 text-[0.7rem] font-bold tracking-wide transition-colors ${
-                locale === "es" ? "bg-accent text-white" : "text-muted hover:text-ink"
-              }`}
-              aria-pressed={locale === "es"}
-            >
-              ES
-            </button>
-          </div>
           <button
             type="button"
             onClick={toggleTheme}
@@ -116,32 +90,6 @@ export function Header() {
         </div>
 
         <div className="flex items-center gap-1.5 md:hidden">
-          <div
-            className="inline-flex items-center rounded-md border border-line bg-canvas p-0.5"
-            role="group"
-            aria-label={m.common.language}
-          >
-            <button
-              type="button"
-              onClick={() => setLocale("en")}
-              className={`rounded px-1.5 py-1 text-[0.65rem] font-bold ${
-                locale === "en" ? "bg-accent text-white" : "text-muted"
-              }`}
-              aria-pressed={locale === "en"}
-            >
-              EN
-            </button>
-            <button
-              type="button"
-              onClick={() => setLocale("es")}
-              className={`rounded px-1.5 py-1 text-[0.65rem] font-bold ${
-                locale === "es" ? "bg-accent text-white" : "text-muted"
-              }`}
-              aria-pressed={locale === "es"}
-            >
-              ES
-            </button>
-          </div>
           <button
             type="button"
             onClick={toggleTheme}

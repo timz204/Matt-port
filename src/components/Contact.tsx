@@ -33,7 +33,7 @@ export function Contact() {
     },
     {
       id: "linkedin" as const,
-      value: "linkedin.com/in/matiasperrone",
+      value: site.linkedin,
       href: site.linkedin,
       icon: Icons.linkedin,
       external: true,
